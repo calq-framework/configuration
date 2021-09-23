@@ -12,5 +12,6 @@ namespace Calq.ConfigurationTest {
         public Inner inner;
         public string text;
         public string nullText = "text";
+        public int port;
     }
 }

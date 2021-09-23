@@ -43,7 +43,7 @@ namespace Calq.ConfigurationTest {
             var testConfigurationA = Config.Load<TestConfiguration>();
             var testConfigurationB = Config.Load<TestConfiguration>();
 
-            Assert.True(Object.ReferenceEquals(testConfigurationA, testConfigurationB));
+            Assert.True(ReferenceEquals(testConfigurationA, testConfigurationB));
         }
 
         [Fact]
@@ -52,6 +52,13 @@ namespace Calq.ConfigurationTest {
                 TestConfiguration testConfiguration = null;
                 Config.Load(ref testConfiguration);
             });
+        }
+
+        [Fact]
+        public void Test5() {
+            var args = Config.Load<CommandLineArgs>();
+
+            Assert.NotEqual(0, args.port);
         }
     }
 }

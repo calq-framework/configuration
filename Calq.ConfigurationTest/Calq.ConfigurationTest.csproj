@@ -24,6 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="config\Calq.ConfigurationTest.CommandLineArgs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="config\Calq.ConfigurationTest.TestConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

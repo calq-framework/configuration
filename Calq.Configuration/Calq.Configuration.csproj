@@ -8,4 +8,8 @@
     <Version>0.0.0</Version>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Ghbvft6.Calq.Options" Version="0.2.2" />
+  </ItemGroup>
+
 </Project>
