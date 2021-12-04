@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Calq.Configuration {
+namespace Ghbvft6.Calq.Configuration {
     internal class Reflection {
         public static object? GetFieldOrPropertyValue(Type type, object obj, string fieldOrPropertyName) {
             var field = type.GetField(fieldOrPropertyName);

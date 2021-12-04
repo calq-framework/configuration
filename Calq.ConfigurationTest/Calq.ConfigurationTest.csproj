@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -24,10 +24,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="config\Calq.ConfigurationTest.CommandLineArgs.json">
+    <None Update="config\Ghbvft6.Calq.ConfigurationTest.CommandLineArgs.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="config\Calq.ConfigurationTest.TestConfiguration.json">
+    <None Update="config\Ghbvft6.Calq.ConfigurationTest.TestConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calq.Configuration.Attributes {
+namespace Ghbvft6.Calq.Configuration.Attributes {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     public class OptionsAttribute : Attribute { }
 }

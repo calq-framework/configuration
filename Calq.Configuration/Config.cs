@@ -1,4 +1,4 @@
-﻿using Calq.Configuration.Attributes;
+﻿using Ghbvft6.Calq.Configuration.Attributes;
 using Ghbvft6.Calq.Options;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 
-namespace Calq.Configuration {
+namespace Ghbvft6.Calq.Configuration {
 
     public class Config {
 
