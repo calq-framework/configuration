@@ -21,6 +21,14 @@ namespace Ghbvft6.Calq.ConfigurationTest {
             var jsonText = File.ReadAllText(jsonPath);
             var testConfiguration = JsonSerializer.Deserialize<TestConfiguration>(jsonText, serializerOptions);
             jsonSerializerResult = JsonSerializer.Serialize(testConfiguration, serializerOptions);
+
+            var configFolder = new DirectoryInfo("config");
+            foreach (var configFile in Config.ConfigDir.GetFiles()) {
+                configFile.Delete();
+            }
+            foreach (var configFile in configFolder.GetFiles()) {
+                File.Copy($"{configFolder.FullName}/{configFile.Name}", $"{Config.ConfigDir.FullName}/{configFile.Name}");
+            }
         }
 
         [Fact]

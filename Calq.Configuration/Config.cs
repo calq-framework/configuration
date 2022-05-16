@@ -2,6 +2,7 @@
 using Ghbvft6.Calq.Options;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Text.Json;
@@ -12,10 +13,11 @@ namespace Ghbvft6.Calq.Configuration {
 
         private static readonly Dictionary<Type, object> instances = new();
 
+        public static DirectoryInfo ConfigDir { get; }
+
         static Config() {
-            if (Directory.Exists("config") == false) {
-                Directory.CreateDirectory("config");
-            }
+            var configPath = $"{Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)}/{Process.GetCurrentProcess().ProcessName}";
+            ConfigDir = Directory.CreateDirectory(configPath);
         }
 
         public static T Load<T>() where T : notnull, new() {
@@ -33,7 +35,7 @@ namespace Ghbvft6.Calq.Configuration {
         public static void Load<T>(ref T instance) where T : notnull {
 
             string GetJsonPath() {
-                return $"config/{typeof(T).FullName}.json";
+                return $"{ConfigDir.FullName}/{typeof(T).FullName}.json";
             }
 
             void Deserialize(Utf8JsonReader reader, ref T instance) {
