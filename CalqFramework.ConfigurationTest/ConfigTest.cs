@@ -1,10 +1,10 @@
-using Ghbvft6.Calq.Configuration;
+using CalqFramework.Configuration;
 using System;
 using System.IO;
 using System.Text.Json;
 using Xunit;
 
-namespace Ghbvft6.Calq.ConfigurationTest {
+namespace CalqFramework.ConfigurationTest {
 
     public class ConfigTest {
 
@@ -17,7 +17,7 @@ namespace Ghbvft6.Calq.ConfigurationTest {
                 IncludeFields = true
             };
 
-            var jsonPath = "config/Ghbvft6.Calq.ConfigurationTest.TestConfiguration.json";
+            var jsonPath = "config/CalqFramework.ConfigurationTest.TestConfiguration.json";
             var jsonText = File.ReadAllText(jsonPath);
             var testConfiguration = JsonSerializer.Deserialize<TestConfiguration>(jsonText, serializerOptions);
             jsonSerializerResult = JsonSerializer.Serialize(testConfiguration, serializerOptions);

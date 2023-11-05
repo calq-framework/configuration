@@ -1,5 +1,5 @@
-# calq configuration
-Calq Configuration is a tiny configuration framework integrated with [calq options](https://github.com/greg-chuchro/calq-options).
+# CalqFramework configuration
+CalqFramework Configuration is a tiny configuration framework integrated with [CalqFramework options](https://github.com/greg-chuchro/CalqFramework-options).
 
 ## Get Started
 ```csharp

@@ -22,14 +22,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Calq.Configuration\Calq.Configuration.csproj" />
+    <ProjectReference Include="..\CalqFramework.Configuration\CalqFramework.Configuration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="config\Ghbvft6.Calq.ConfigurationTest.CommandLineArgs.json">
+    <None Update="config\CalqFramework.ConfigurationTest.CommandLineArgs.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="config\Ghbvft6.Calq.ConfigurationTest.TestConfiguration.json">
+    <None Update="config\CalqFramework.ConfigurationTest.TestConfiguration.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

@@ -1,8 +1,8 @@
 ﻿#pragma warning disable CS0649
 
-using Ghbvft6.Calq.Configuration.Attributes;
+using CalqFramework.Configuration.Attributes;
 
-namespace Ghbvft6.Calq.ConfigurationTest {
+namespace CalqFramework.ConfigurationTest {
     [OptionsAttribute]
     class CommandLineArgs {
         public int port;

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calq.Configuration", "Calq.Configuration\Calq.Configuration.csproj", "{38454BFB-0A83-45FD-B013-7DDE6B1967DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalqFramework.Configuration", "CalqFramework.Configuration\CalqFramework.Configuration.csproj", "{38454BFB-0A83-45FD-B013-7DDE6B1967DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calq.ConfigurationTest", "Calq.ConfigurationTest\Calq.ConfigurationTest.csproj", "{5D922CC6-D462-4C76-8DAA-D67D373565B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalqFramework.ConfigurationTest", "CalqFramework.ConfigurationTest\CalqFramework.ConfigurationTest.csproj", "{5D922CC6-D462-4C76-8DAA-D67D373565B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

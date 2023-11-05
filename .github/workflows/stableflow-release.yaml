@@ -13,9 +13,9 @@ permissions:
 
 jobs:
   release:
-    uses: calq-framework/stableflow/.github/workflows/stableflow.yaml@main
+    uses: CalqFramework-framework/stableflow/.github/workflows/stableflow.yaml@main
     with:
       command: release
     secrets:
       MAIN_NUGET_PAT: ${{ secrets.MAIN_NUGET_PAT }}
-      CALQ_FRAMEWORK_NUGET_PAT: ${{ secrets.CALQ_FRAMEWORK_NUGET_PAT }}
+      CalqFramework_FRAMEWORK_NUGET_PAT: ${{ secrets.CalqFramework_FRAMEWORK_NUGET_PAT }}
