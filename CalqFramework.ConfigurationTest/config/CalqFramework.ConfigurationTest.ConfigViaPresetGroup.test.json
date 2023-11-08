@@ -1,0 +1,11 @@
+﻿{
+  "integer": 2,
+  "boolean": true,
+  "inner": {
+    "a": 1,
+    "b": 1
+  },
+  "text": "text",
+  "nullText": null,
+  "port": 0
+}
