@@ -1,7 +1,7 @@
 ﻿#pragma warning disable CS0649
 
 namespace CalqFramework.ConfigurationTest {
-    class TestConfiguration {
+    class PlainConfiguration {
         public class Inner {
             public int a;
             public int b;

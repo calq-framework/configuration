@@ -4,7 +4,7 @@ using CalqFramework.Configuration.Attributes;
 
 namespace CalqFramework.ConfigurationTest {
     [OptionsAttribute]
-    class CommandLineArgs {
+    class ConfigViaCommandline {
         public int port;
     }
 }
