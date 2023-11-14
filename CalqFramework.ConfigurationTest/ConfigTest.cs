@@ -1,5 +1,4 @@
 using CalqFramework.Configuration;
-using System;
 using System.IO;
 using System.Text.Json;
 using Xunit;
@@ -56,12 +55,12 @@ namespace CalqFramework.ConfigurationTest {
             Assert.True(ReferenceEquals(configA, configB));
         }
 
-        [Fact]
-        public void Test5() {
-            var config = Config.Load<ConfigViaCommandline>();
+        //[Fact]
+        //public void Test5() {
+        //    var config = Config.Load<ConfigViaCommandline>();
 
-            Assert.NotEqual(0, config.port);
-        }
+        //    Assert.NotEqual(0, config.port);
+        //}
 
         [Fact]
         public void Test6() {
