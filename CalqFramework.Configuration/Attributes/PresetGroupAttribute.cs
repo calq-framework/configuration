@@ -5,10 +5,10 @@ namespace CalqFramework.Configuration.Attributes {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct)]
     public class PresetGroupAttribute : Attribute {
 
-        public string GroupName { get; }
+        public string Name { get; }
 
-        public PresetGroupAttribute(string groupName) {
-            GroupName = groupName;
+        public PresetGroupAttribute(string name) {
+            Name = name;
         }
     }
 }

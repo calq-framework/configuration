@@ -30,7 +30,7 @@
     <None Update="config\CalqFramework.ConfigurationTest.ConfigViaPresetGroup.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="config\CalqFramework.ConfigurationTest.PlainConfiguration.default.json">
+    <None Update="config\CalqFramework.ConfigurationTest.SomeConfiguration.default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="config\CalqFramework.ConfigurationTest.ConfigViaCommandline.default.json">

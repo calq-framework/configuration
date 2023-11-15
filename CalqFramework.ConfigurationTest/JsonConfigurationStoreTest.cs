@@ -7,15 +7,16 @@ namespace CalqFramework.ConfigurationTest {
 
 
     [Collection("Sequential")]
-    public class ConfigTest {
+    public class JsonConfigurationStoreTest {
 
-        static ConfigTest() {
-            var configFolder = new DirectoryInfo("config");
-            foreach (var configFile in Config.ConfigDir.GetFiles()) {
+        static JsonConfigurationStoreTest() {
+            var configStore = new JsonConfigurationStore();
+            var testConfigDir = new DirectoryInfo("config");
+            foreach (var configFile in configStore.ConfigDir.GetFiles()) {
                 configFile.Delete();
             }
-            foreach (var configFile in configFolder.GetFiles()) {
-                File.Copy($"{configFolder.FullName}/{configFile.Name}", $"{Config.ConfigDir.FullName}/{configFile.Name}");
+            foreach (var configFile in testConfigDir.GetFiles()) {
+                File.Copy($"{testConfigDir.FullName}/{configFile.Name}", $"{configStore.ConfigDir.FullName}/{configFile.Name}");
             }
         }
 
@@ -41,31 +42,32 @@ namespace CalqFramework.ConfigurationTest {
 
         [Fact]
         public void Test2() {
-            var testConfiguration = Config.Load<PlainConfiguration>();
+            var testConfiguration = new JsonConfigurationStore().Load<SomeConfiguration>();
 
-            var serializedJson = Serialize<PlainConfiguration>($"config/CalqFramework.ConfigurationTest.{nameof(PlainConfiguration)}.default.json");
+            var serializedJson = Serialize<SomeConfiguration>($"config/CalqFramework.ConfigurationTest.{nameof(SomeConfiguration)}.default.json");
             Assert.Equal(Serialize(testConfiguration), serializedJson);
         }
 
         [Fact]
         public void Test3() {
-            var configA = Config.Load<PlainConfiguration>();
-            var configB = Config.Load<PlainConfiguration>();
+            var configStore = new JsonConfigurationStore();
+            var configA = configStore.Load<SomeConfiguration>();
+            var configB = configStore.Load<SomeConfiguration>();
 
             Assert.True(ReferenceEquals(configA, configB));
         }
 
         //[Fact]
         //public void Test5() {
-        //    var config = Config.Load<ConfigViaCommandline>();
+        //    var config = new JsonConfigurationStore().Load<ConfigViaCommandline>();
 
         //    Assert.NotEqual(0, config.port);
         //}
 
         [Fact]
         public void Test6() {
-            _ = Config.LoadPresetConfiguration<PresetConfig>();
-            var config = Config.Load<ConfigViaPresetGroup>();
+            var configStore = new JsonConfigurationStore<PresetConfig>();
+            var config = configStore.Load<ConfigViaPresetGroup>();
 
             var serializedJson = Serialize<ConfigViaPresetGroup>($"config/CalqFramework.ConfigurationTest.{nameof(ConfigViaPresetGroup)}.test.json");
             Assert.Equal(Serialize(config), serializedJson);
