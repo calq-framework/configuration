@@ -1,13 +1,3 @@
-# CalqFramework configuration
-CalqFramework Configuration is a tiny configuration framework integrated with [CalqFramework options](https://github.com/greg-chuchro/CalqFramework-options).
+Experimental.
 
-## Get Started
-```csharp
-[OptionsAttribute] // enables HelloWorld values to be overwritten by CLI options
-public class HelloWorld {
-    public string helloWorld;
-}
-````
-```csharp
-var helloWorld = Config.Load<HelloWorld>(); // loads from a config folder
-````
+tiny configuration framework
