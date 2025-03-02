@@ -1,3 +1,3 @@
 Experimental.
 
-tiny configuration framework
+configuration management framework
