@@ -6,7 +6,15 @@
     <RootNamespace>CalqFramework.Configuration</RootNamespace>
     <PackageId>CalqFramework.Configuration</PackageId>
     <Version>0.3.6</Version>
+    <PackageProjectUrl>https://github.com/calq-framework</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Copyright>2024 Calq Framework</Copyright>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt" Pack="true" PackagePath=""/>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CalqFramework.Serialization" Version="0.*" />
